@@ -10,9 +10,7 @@ import os
 #   code = input("Code à envoyer à l'Arduino: ")
 #   ser.write(code.encode('utf-8'))
 maliste = []
-inventaire = open("C:/Users/Kevin/Desktop/ie/tfe/code/python/magasin.txt",'r')
-
-#Comment mettre a jour mon code sur github via pycharm ?
+inventaire = open("C:/Users/Kevin/Desktop/ie/tfe/code/python/test.txt",'r')
 
 nom = ""
 coord_x = 0
