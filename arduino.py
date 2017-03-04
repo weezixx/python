@@ -1,8 +1,9 @@
 import sys
 import os
-#import serial
+import serial
+import time
 
-#ser = serial.Serial("COM3",timeout=1)
+ser = serial.Serial("COM3",timeout=1)
 
 # print(ser)
 
@@ -11,8 +12,6 @@ import os
 #   ser.write(code.encode('utf-8'))
 maliste = []
 inventaire = open("C:/Users/Kevin/Desktop/ie/tfe/code/python/magasin.txt",'r')
-
-#Comment mettre a jour mon code sur github via pycharm ??????
 
 nom = ""
 coord_x = 0
@@ -24,7 +23,6 @@ inventaire.close()
 
 requete = input("Que désirez vous ?")
 
-
 for piece in pieces:
     maliste = piece.split(" ")
 
@@ -34,7 +32,13 @@ for piece in pieces:
         coord_x = maliste[1]
         coord_y = maliste[2]
 
-print(nom, coord_x , coord_y)
+print("nom : ",nom,"\nx :" ,coord_x ,"\ny :", coord_y)
+ser.write(coord_x.encode('utf-8'))
+time.sleep(1)
+
+ser.write(coord_y.encode('utf-8'))
+
+
 
 
 
