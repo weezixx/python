@@ -34,8 +34,10 @@ for piece in pieces:
 
 print("nom : ",nom,"\nx :" ,coord_x ,"\ny :", coord_y)
 ser.write(coord_x.encode('utf-8'))
-time.sleep(1)
+ser.write(b' ')
+#time.sleep(1)
 ser.write(coord_y.encode('utf-8'))
+ser.write(b'\n')
 
 
 
